@@ -23,7 +23,7 @@ class Home extends CI_Controller
     
     public function blog(){
         
-        $result['blog'] = $this->Home_model->getRecords('blog','','','id DESC','6');
+        $result['blog'] = $this->Home_model->getRecords('blog','','','id DESC','6','0');
         
         $this->load->view('header');
         $this->load->view('blog', $result);
@@ -33,23 +33,30 @@ class Home extends CI_Controller
     public function blogDetail(){
         
         $result['blog'] = $this->Home_model->getRecords('blog','',['title' => urldecode($this->uri->segment(2))]);
-        $result['recent'] = $this->Home_model->getRecords('blog','','','id DESC','3');
+        $result['recent'] = $this->Home_model->getRecords('blog','','','id DESC','3','0');
         
         $this->load->view('header');
         $this->load->view('blog-detail', $result);
         $this->load->view('footer');
     }
     
+    public function loadmore(){
+        
+        $result['blog'] = $this->Home_model->getRecords('blog','','','id DESC','6',$_POST['offset']);
+        return $this->load->view('blog-partial', $result);
+    }
+    
     public function projectRequest(){
         
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
-        $this->form_validation->set_rules('mobile', 'Mobile', 'required');
+        $this->form_validation->set_rules('phone', 'Phome', 'required');
         $this->form_validation->set_rules('description', 'Description', 'required');
         $this->form_validation->set_rules('chkList', 'Applied for', 'required');
 
         if ($this->form_validation->run() == FALSE) {
-            redirect('/');
+            echo '<div styke="color: red;">Required fields must not be empty</div>';
+            exit;
         }else{
             $this->load->helper('mail');
             
@@ -81,6 +88,9 @@ class Home extends CI_Controller
             $content .= $this->input->get_post('description');
 
             mail($to, '', $from, $subject, $content, $file);
+            
+            echo '<div style="color: green;">Thank you, We will contact you soon</div>';
+            exit;
         }
     }
     

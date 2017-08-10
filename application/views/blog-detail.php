@@ -14,7 +14,7 @@
                     <div class="recentpost">
                         <h4>Recent Posts</h4>
                         <?php foreach($recent as $r): ?>
-                        <a href="#">
+                        <a href="<?php echo base_url('blog-detail/' . urlencode($r['title'])); ?>">
                             <?php echo $r['title']; ?>
                             <span class="date"><?php echo date('F d, Y', strtotime($r['created_at'])); ?></span>
                         </a>

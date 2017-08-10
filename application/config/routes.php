@@ -43,6 +43,7 @@ $route['blog'] = "home/blog";
 $route['project'] = "home/projectRequest";
 $route['contact-us'] = "home/contactUs";
 $route['blog'] = "home/blog";
+$route['blog/loadmore'] = "home/loadmore";
 $route['blog-detail/(:any)'] = "home/blogDetail/$1";
 
 $route['default_controller'] = "home";

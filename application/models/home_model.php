@@ -7,7 +7,7 @@ class Home_model extends CI_Model
         return $query->row();
     }
 
-    function getRecords($table, $select_fields='', $where='', $order='', $limit='')
+    function getRecords($table, $select_fields='', $where='', $order='', $limit='', $offset='')
     {
         if(count($select_fields) > 0){
             $this->db->select(implode(',', $select_fields));
@@ -25,7 +25,7 @@ class Home_model extends CI_Model
             $this->db->order_by("$order");
         }
         if(!empty($limit)){
-            $this->db->limit("$limit");
+            $this->db->limit($limit, $offset);
         }
         $query = $this->db->get($table);
         return $query->result_array();

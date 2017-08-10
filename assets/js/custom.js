@@ -91,14 +91,12 @@ $(function () {
 
     $signupForm.submit(function(e){
         e.preventDefault();
-        alert('heree');
-        alert('submit form');
         $.ajax({
             url: $(this).attr('action'),
             type: 'POST',
             data: $(this).serialize(),
             success: function(response) {
-                alert('submitted');
+                $('.prev').before(response);
             }
         }); 
     });
@@ -106,19 +104,6 @@ $(function () {
     $signupForm.validate({
         errorElement: 'em',
         submitHandler: function (form) {
-            alert('submitted');
-            
-//            form.submit(function(e){
-//                e.preventDefault();
-//                $.ajax({
-//                    type: "POST",
-//                    url: form.attr("action"),
-//                    data: form.serialize(),
-//                    success: function () {
-//                        // get response from servlet and display on page via jQuery 
-//                    }
-//                });
-//            });
         }
     });
 
@@ -181,4 +166,21 @@ $(document).ready(function () {
             }
         ],
     });
+    
+    
+    $('#loadmore').click(function(e){
+        e.preventDefault();
+        $('#loader').show();
+        $count = $('.BlogBox').length;
+        $.ajax({
+            url: 'http://localhost/projects/syg/blog/loadmore',
+            type: 'POST',
+            data: {offset: $count},
+            success: function(response) {
+                $('#loader').hide();
+                $('#blog-list').append(response).fadeIn(500);
+            }
+        }); 
+    });
+    
 });

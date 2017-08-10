@@ -148,7 +148,7 @@
 
                                                     <div class="form-group message">
                                                         <label for="describe_project">Describe the project</label>
-                                                        <textarea cols="0" rows="" name="descrption" required placeholder="Requirements, intentions, target audience, goals etc."></textarea>
+                                                        <textarea cols="0" rows="" name="description" required placeholder="Requirements, intentions, target audience, goals etc."></textarea>
                                                     </div>
 
                                                     <div class="form-group">
