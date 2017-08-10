@@ -25,7 +25,7 @@ var bkExtend = function(){var A = arguments; if (A.length == 1){A = [this, A[0]]
                 'outdent' : {name : __('Remove Indent'), command : 'outdent', noActive : true},
                 'hr' : {name : __('Horizontal Rule'), command : 'insertHorizontalRule', noActive : true}
         },
-                iconsPath : 'http://localhost/projects/syg/assets/dashboard/dist/js/nicEditorIcons.gif',
+                iconsPath : 'http://localhost/syg/assets/dashboard/dist/js/nicEditorIcons.gif',
                 buttonList : ['bold', 'italic', 'underline', 'left', 'center', 'right', 'justify', 'ol', 'ul', 'fontSize', 'fontFamily', 'fontFormat', 'indent', 'outdent', 'link', 'unlink', 'forecolor', 'bgcolor'],
                 iconList : {"bgcolor":1, "forecolor":2, "bold":3, "center":4, "hr":5, "indent":6, "italic":7, "justify":8, "left":9, "ol":10, "outdent":11, "removeformat":12, "right":13, "save":14, "strikethrough":15, "subscript":16, "superscript":17, "ul":18, "underline":19, "link":20, "unlink":21, "close":22, "arrow":23}
 

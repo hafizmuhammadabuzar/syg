@@ -17,48 +17,48 @@
 <nav class="outer-nav left vertical">
     <ul>
         <li><a href="<?php echo base_url(); ?>">Home</a></li>                    
-        <li><a href="about-us.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
+        <li><a href="<?php echo base_url('about-us'); ?>">About</a></li>
+        <li><a href="<?php echo base_url('work'); ?>">Work</a></li>
         <li class="dropdown">
             <a href="javascript:void(0);"><button onclick="myFunction()" class="dropbtn">Services <i class="fa fa-angle-double-down" aria-hidden="true"></i></button></a>
             <div id="myDropdown" class="dropdown-content">
                 <div class="dropdown">
-                    <a class="LeftAlign" href="mob-app-development.html">Mobile App Development</a>
+                    <a class="LeftAlign" href="<?php echo base_url('mob-app-development'); ?>">Mobile App Development</a>
                     <button onclick="myFunctionSecond()" class="dropbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
                     <div id="myDropdownSecond" class="dropdown-content">
                         <ul>
-                            <li><a href="ios-development.html">IOS Application</a></li>
-                            <li><a href="android-development.html">Android Application</a></li>
+                            <li><a href="<?php echo base_url('ios-application'); ?>">IOS Application</a></li>
+                            <li><a href="<?php echo base_url('android-application'); ?>">Android Application</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a class="LeftAlign" href="web-development.html">Web Development</a><button onclick="myFunctionThird()" class="dropbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+                    <a class="LeftAlign" href="<?php echo base_url('web-development'); ?>">Web Development</a><button onclick="myFunctionThird()" class="dropbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
                     <div id="myDropdownThird" class="dropdown-content">
                         <ul>
-                            <li><a href="custom-website.html">Custom Website</a></li>
-                            <li><a href="wordpress-website.html">Wordpress Website</a></li>
+                            <li><a href="<?php echo base_url('custom-website'); ?>">Custom Website</a></li>
+                            <li><a href="<?php echo base_url('wordpress-website'); ?>">Wordpress Website</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a class="LeftAlign" href="graphics.html">Graphincs (UI/UX)</a><button onclick="myFunctionFour()" class="dropbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+                    <a class="LeftAlign" href="<?php echo base_url('graphics'); ?>">Graphincs (UI/UX)</a><button onclick="myFunctionFour()" class="dropbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
                     <div id="myDropdownFour" class="dropdown-content">
                         <ul>
-                            <li><a href="app-design.html">App Design</a></li>
-                            <li><a href="company-branding.html">Company Branding</a></li>
-                            <li><a href="web-design.html">Web Design</a></li>
+                            <li><a href="<?php echo base_url('app-design'); ?>">App Design</a></li>
+                            <li><a href="<?php echo base_url('company-branding'); ?>">Company Branding</a></li>
+                            <li><a href="<?php echo base_url('web-design'); ?>">Web Design</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a class="LeftAlign" href="digital-marketing.html">Digital Marketing </a><button onclick="myFunctionFive()" class="dropbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+                    <a class="LeftAlign" href="<?php echo base_url('digital-marketing'); ?>">Digital Marketing </a><button onclick="myFunctionFive()" class="dropbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
                     <div id="myDropdownFive" class="dropdown-content">
                         <ul>
-                            <li><a href="seo.html">SEO</a></li>
-                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
-                            <li><a href="pay-per-click.html">Pay Per Click</a></li>
-                            <li><a href="content-optimization.html">Content Optimization</a></li>
+                            <li><a href="<?php echo base_url('seo'); ?>">SEO</a></li>
+                            <li><a href="<?php echo base_url('social-media-marketing'); ?>">Social Media Marketing</a></li>
+                            <li><a href="<?php echo base_url('pay-per-click'); ?>">Pay Per Click</a></li>
+                            <li><a href="<?php echo base_url('content-optimization'); ?>">Content Optimization</a></li>
                         </ul>
                     </div>
                 </div>
@@ -71,7 +71,6 @@
 </div>
 
 <script type="text/javascript">
-
     $('.arrow').click(function () {
         $.fn.fullpage.moveSectionDown();
     });

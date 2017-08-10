@@ -24,15 +24,15 @@
                         <form role="form" action="<?php echo base_url() . 'admin/' . $url; ?>" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Title*</label>
-                                <input class="form-control" name="title" value="<?php echo $blog->title; ?>" required="required">
+                                <input class="form-control" name="title" value="<?php echo $blog->title; ?>">
                             </div>
                             <div class="form-group">
                                 <label>Tags*</label>
-                                <input class="form-control" name="tags" id="tags" value="<?php echo $blog->tags; ?>" data-role="tagsinput" required="required">
+                                <input class="form-control" name="tags" id="tags" value="<?php echo $blog->tags; ?>" data-role="tagsinput">
                             </div>
                             <div class="form-group">
                                 <label>Description*</label>
-                                <textarea cols="10" rows="10" class="form-control" name="description" required="required"><?php echo $blog->description; ?></textarea>
+                                <textarea cols="10" rows="10" class="form-control" name="description"><?php echo $blog->description; ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Image*</label>

@@ -25,7 +25,7 @@
                     <div class="tags">
                         <h4>Tags</h4>
                         <?php foreach($tags as $t): ?>
-                        <a href="#">
+                        <a>
                             <?php echo $t; ?>
                         </a>
                         <?php endforeach; ?>

@@ -20,6 +20,102 @@ class Home extends CI_Controller
         $this->load->view('index');
         $this->load->view('footer');
     }
+	
+	public function about(){
+        $this->load->view('header');
+        $this->load->view('about-us');
+        $this->load->view('footer');
+    }
+	
+	public function web_design(){
+        $this->load->view('header');
+        $this->load->view('web-design');
+        $this->load->view('footer');
+    }
+	
+	public function work(){
+        $this->load->view('header');
+        $this->load->view('work');
+        $this->load->view('footer');
+    }
+	
+	public function android_application(){
+        $this->load->view('header');
+        $this->load->view('android-application');
+        $this->load->view('footer');
+    }
+	public function app_design(){
+        $this->load->view('header');
+        $this->load->view('app-design');
+        $this->load->view('footer');
+    }
+	public function company_branding(){
+        $this->load->view('header');
+        $this->load->view('company-branding');
+        $this->load->view('footer');
+    }
+	public function content_optimization(){
+        $this->load->view('header');
+        $this->load->view('content-optimization');
+        $this->load->view('footer');
+    }
+	public function digital_marketing(){
+        $this->load->view('header');
+        $this->load->view('digital-marketing');
+        $this->load->view('footer');
+    }
+	public function graphics(){
+        $this->load->view('header');
+        $this->load->view('graphics');
+        $this->load->view('footer');
+    }
+	public function ios_application(){
+        $this->load->view('header');
+        $this->load->view('ios-application');
+        $this->load->view('footer');
+    }
+	public function mob_app_development(){
+        $this->load->view('header');
+        $this->load->view('mob-app-development');
+        $this->load->view('footer');
+    }
+	public function pay_per_click(){
+        $this->load->view('header');
+        $this->load->view('pay-per-click');
+        $this->load->view('footer');
+    }
+	public function social_media_marketing(){
+        $this->load->view('header');
+        $this->load->view('social-media-marketing');
+        $this->load->view('footer');
+    }
+	public function web_deisgn(){
+        $this->load->view('header');
+        $this->load->view('web-deisgn');
+        $this->load->view('footer');
+    }
+	public function web_development(){
+        $this->load->view('header');
+        $this->load->view('web-development');
+        $this->load->view('footer');
+    }
+	public function wordpress_website(){
+        $this->load->view('header');
+        $this->load->view('wordpress-website');
+        $this->load->view('footer');
+    }
+	
+	public function custom_website(){
+        $this->load->view('header');
+        $this->load->view('custom-website');
+        $this->load->view('footer');
+    }
+	
+	public function seo(){
+        $this->load->view('header');
+        $this->load->view('seo');
+        $this->load->view('footer');
+    }
     
     public function blog(){
         

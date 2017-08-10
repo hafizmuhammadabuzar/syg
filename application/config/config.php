@@ -17,7 +17,7 @@
 |
 */
 
-$config['base_url']	= 'http://localhost/projects/syg/';
+$config['base_url']	= 'http://localhost/syg/';
 /*
 |--------------------------------------------------------------------------
 | Index File

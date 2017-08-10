@@ -1,4 +1,3 @@
-
 <main id="main">
     <section class="MobAppDevel Contact">
         <div class="container">
@@ -31,7 +30,7 @@
                 <form action="<?php echo base_url('contact-us'); ?>" method="post">
                     <input type="text" placeholder="Your Name" name="name" required="required" />
                     <input type="email" placeholder="Your Email" name="email" required="required" />
-                    <textarea cols="" rows="" placeholder="Your Message" name="message" required="required"></textarea>
+                    <textarea cols="" rows="" placeholder="Your Message" name="message" required></textarea>
                     <input type="submit" value="SEND" name="submit" />
                 </form>
             </div>
@@ -48,4 +47,5 @@
     
 </main>  
 
-
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWdcPG2xN-y9pyzHxYgrBhckrKdqatp4I"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/map.js"></script>
