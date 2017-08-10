@@ -207,7 +207,9 @@ class Admin extends CI_Controller
         $this->form_validation->set_rules('description', 'Description', 'required');
 
         if ($this->form_validation->run() == FALSE) {
-            redirect('admin/addBlog');
+            $this->load->view('admin/header');
+            $this->load->view('admin/add_blog');
+            $this->load->view('admin/footer');
         }
         else {
             if($_FILES['image']['name'] != ''){

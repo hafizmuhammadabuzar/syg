@@ -21,10 +21,10 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <?php echo validation_errors(); ?>
-                        <form role="form" action="<?php echo base_url() . 'admin/' . $url; ?>" method="post" enctype="multipart/form-data" novalidate>
+                        <form role="form" action="<?php echo base_url() . 'admin/' . $url; ?>" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Title*</label>
-                                <input class="form-control" name="title" value="<?php echo $blog->title; ?>">
+                                <input class="form-control" name="title" value="<?php echo $blog->title; ?>" required>
                             </div>
                             <div class="form-group">
                                 <label>Tags*</label>
@@ -36,7 +36,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Image*</label>
-                                <input type="file" class="form-control" name="image" value="<?php echo $blog->image; ?>">
+                                <input type="file" class="form-control" name="image" value="<?php echo $blog->image; ?>" <?php if($this->uri->segment(2) != 'editBlog') echo 'required'; ?>>
                             </div>
                             <?php if (!empty($blog->image)): ?>
                                 <img src="<?php echo base_url() . 'assets/blog/' . $blog->image; ?>" width="100" height="100" />

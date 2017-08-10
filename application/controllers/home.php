@@ -138,7 +138,7 @@ class Home extends CI_Controller
     
     public function loadmore(){
         
-        $result['blog'] = $this->Home_model->getRecords('blog','','','id DESC','6',$_POST['offset']);
+        $result['blog'] = $this->Home_model->getRecords('blog','','','id DESC','3',$_POST['offset']);
         return $this->load->view('blog-partial', $result);
     }
     
