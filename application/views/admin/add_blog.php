@@ -10,7 +10,6 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
-        <?php echo validation_errors(); ?>
 
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -21,7 +20,8 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-6">
-                        <form role="form" action="<?php echo base_url() . 'admin/' . $url; ?>" method="post" enctype="multipart/form-data">
+                        <?php echo validation_errors(); ?>
+                        <form role="form" action="<?php echo base_url() . 'admin/' . $url; ?>" method="post" enctype="multipart/form-data" novalidate>
                             <div class="form-group">
                                 <label>Title*</label>
                                 <input class="form-control" name="title" value="<?php echo $blog->title; ?>">

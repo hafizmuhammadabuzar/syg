@@ -61,6 +61,7 @@ $route['web-deisgn'] = "home/web_deisgn";
 $route['web-development'] = "home/web_development";
 $route['wordpress-website'] = "home/wordpress_website";
 $route['blog'] = "home/blog";
+$route['blog/loadmore'] = "home/loadmore";
 $route['blog-detail/(:any)'] = "home/blogDetail/$1";
 
 $route['default_controller'] = "home";
